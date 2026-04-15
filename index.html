@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <!-- Aqui depois você pode conectar o CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container principal da aplicação -->
+    <div class="container">
+
+        <!-- Título da página -->
+        <h1>Minha To-Do List</h1>
+
+        <!-- Área de entrada de tarefas -->
+        <div class="input-area">
+
+            <!-- Campo onde o usuário digita a tarefa -->
+            <input 
+                type="text" 
+                placeholder="Digite uma tarefa..." 
+                class="task-input"
+            >
+
+            <!-- Seletor de prioridade -->
+            <select class="priority-select">
+                <option value="alta">Alta</option>
+                <option value="media">Média</option>
+                <option value="baixa">Baixa</option>
+            </select>
+
+            <!-- Botão de adicionar (visual apenas, sem JS) -->
+            <button class="add-button">
+                Adicionar
+            </button>
+
+        </div>
+
+        <!-- Lista de tarefas -->
+        <ul class="task-list">
+
+            <!-- Tarefa de prioridade alta -->
+            <li class="task alta">
+                Fazer trabalho da faculdade
+            </li>
+
+            <!-- Tarefa de prioridade média -->
+            <li class="task media">
+                Estudar HTML e CSS
+            </li>
+
+            <!-- Tarefa de prioridade baixa -->
+            <li class="task baixa">
+                Jogar depois
+            </li>
+
+            <!-- Tarefa concluída (exemplo com classe extra) -->
+            <li class="task media concluida">
+                Revisar conteúdo ✔
+            </li>
+
+        </ul>
+
+    </div>
+
+</body>
+</html>
