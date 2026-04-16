@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Tarefas</title>
+    <title>Painel de Tarefas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,64 +11,68 @@
 
     <h1>📋 Painel de Tarefas</h1>
 
-    <!-- Campo visual -->
-    <div class="form">
-        <input type="text" placeholder="Digite sua tarefa...">
-        <select>
+    <!-- FORMULÁRIO -->
+    <form class="form">
+        <input type="text" placeholder="Digite sua tarefa..." required>
+
+        <select required>
+            <option value="">Selecione prioridade</option>
             <option>Baixa (Verde)</option>
             <option>Média (Amarelo)</option>
             <option>Alta (Vermelho)</option>
         </select>
-        <button>Adicionar</button>
-    </div>
+
+        <button type="submit">Adicionar</button>
+
+        <!-- Mensagem de erro -->
+        <p class="erro">❌ Ocorreu algum erro, tente novamente</p>
+    </form>
 
     <div class="listas">
 
         <!-- BAIXA -->
         <h2 class="titulo baixa-text">🟢 Baixa Prioridade</h2>
         <ul>
-            <!-- 10 tarefas -->
-            <!-- repete padrão -->
-            <li class="tarefa baixa"><input type="checkbox" id="b1"><label for="b1">Organizar arquivos</label></li>
-            <li class="tarefa baixa"><input type="checkbox" id="b2"><label for="b2">Limpar mesa</label></li>
-            <li class="tarefa baixa"><input type="checkbox" id="b3"><label for="b3">Responder emails</label></li>
-            <li class="tarefa baixa"><input type="checkbox" id="b4"><label for="b4">Atualizar notas</label></li>
-            <li class="tarefa baixa"><input type="checkbox" id="b5"><label for="b5">Assistir aula</label></li>
-            <li class="tarefa baixa"><input type="checkbox" id="b6"><label for="b6">Revisar conteúdo</label></li>
-            <li class="tarefa baixa"><input type="checkbox" id="b7"><label for="b7">Separar documentos</label></li>
-            <li class="tarefa baixa"><input type="checkbox" id="b8"><label for="b8">Planejar semana</label></li>
-            <li class="tarefa baixa"><input type="checkbox" id="b9"><label for="b9">Ver notificações</label></li>
-            <li class="tarefa baixa"><input type="checkbox" id="b10"><label for="b10">Organizar pastas</label></li>
+            <li class="tarefa baixa"><input type="checkbox"><label>Organizar arquivos</label></li>
+            <li class="tarefa baixa"><input type="checkbox"><label>Limpar mesa</label></li>
+            <li class="tarefa baixa"><input type="checkbox"><label>Responder emails</label></li>
+            <li class="tarefa baixa"><input type="checkbox"><label>Atualizar notas</label></li>
+            <li class="tarefa baixa"><input type="checkbox"><label>Assistir aula</label></li>
+            <li class="tarefa baixa"><input type="checkbox"><label>Revisar conteúdo</label></li>
+            <li class="tarefa baixa"><input type="checkbox"><label>Separar documentos</label></li>
+            <li class="tarefa baixa"><input type="checkbox"><label>Planejar semana</label></li>
+            <li class="tarefa baixa"><input type="checkbox"><label>Ver notificações</label></li>
+            <li class="tarefa baixa"><input type="checkbox"><label>Organizar pastas</label></li>
         </ul>
 
         <!-- MÉDIA -->
         <h2 class="titulo media-text">🟡 Média Prioridade</h2>
         <ul>
-            <li class="tarefa media"><input type="checkbox" id="m1"><label for="m1">Estudar CSS</label></li>
-            <li class="tarefa media"><input type="checkbox" id="m2"><label for="m2">Fazer exercícios</label></li>
-            <li class="tarefa media"><input type="checkbox" id="m3"><label for="m3">Criar layout</label></li>
-            <li class="tarefa media"><input type="checkbox" id="m4"><label for="m4">Ajustar responsividade</label></li>
-            <li class="tarefa media"><input type="checkbox" id="m5"><label for="m5">Testar site</label></li>
-            <li class="tarefa media"><input type="checkbox" id="m6"><label for="m6">Corrigir erros</label></li>
-            <li class="tarefa media"><input type="checkbox" id="m7"><label for="m7">Revisar código</label></li>
-            <li class="tarefa media"><input type="checkbox" id="m8"><label for="m8">Organizar projeto</label></li>
-            <li class="tarefa media"><input type="checkbox" id="m9"><label for="m9">Subir GitHub</label></li>
-            <li class="tarefa media"><input type="checkbox" id="m10"><label for="m10">Documentar</label></li>
+            <li class="tarefa media"><input type="checkbox"><label>Estudar CSS</label></li>
+            <li class="tarefa media"><input type="checkbox"><label>Fazer exercícios</label></li>
+            <li class="tarefa media"><input type="checkbox"><label>Criar layout</label></li>
+            <li class="tarefa media"><input type="checkbox"><label>Ajustar responsividade</label></li>
+            <li class="tarefa media"><input type="checkbox"><label>Testar site</label></li>
+            <li class="tarefa media"><input type="checkbox"><label>Corrigir erros</label></li>
+            <li class="tarefa media"><input type="checkbox"><label>Revisar código</label></li>
+            <li class="tarefa media"><input type="checkbox"><label>Organizar projeto</label></li>
+            <li class="tarefa media"><input type="checkbox"><label>Subir GitHub</label></li>
+            <li class="tarefa media"><input type="checkbox"><label>Documentar</label></li>
         </ul>
 
         <!-- ALTA -->
         <h2 class="titulo alta-text">🔴 Alta Prioridade</h2>
         <ul>
-            <li class="tarefa alta"><input type="checkbox" id="a1"><label for="a1">Entregar projeto</label></li>
-            <li class="tarefa alta"><input type="checkbox" id="a2"><label for="a2">Finalizar site</label></li>
-            <li class="tarefa alta"><input type="checkbox" id="a3"><label for="a3">Enviar trabalho</label></li>
-            <li class="tarefa alta"><input type="checkbox" id="a4"><label for="a4">Corrigir bugs críticos</label></li>
-            <li class="tarefa alta"><input type="checkbox" id="a5"><label for="a5">Deploy no Vercel</label></li>
-            <li class="tarefa alta"><input type="checkbox" id="a6"><label for="a6">Apresentação</label></li>
-            <li class="tarefa alta"><input type="checkbox" id="a7"><label for="a7">Revisão final</label></li>
-            <li class="tarefa alta"><input type="checkbox" id="a8"><label for="a8">Corrigir layout</label></li>
-            <li class="tarefa alta"><input type="checkbox" id="a9"><label for="a9">Testar tudo</label></li>
-            <li class="tarefa alta"><input type="checkbox" id="a10"><label for="a10">Entrega final</label></li>
+            <li class="tarefa alta"><input type="checkbox"><label>Entregar projeto</label></li>
+            <li class="tarefa alta"><input type="checkbox"><label>Finalizar site</label></li>
+            <li class="tarefa alta"><input type="checkbox"><label>Enviar trabalho</label></li>
+            <li class="tarefa alta"><input type="checkbox"><label>Corrigir bugs críticos</label></li>
+            <li class="tarefa alta"><input type="checkbox"><label>Deploy no Vercel</label></li>
+            <li class="tarefa alta"><input type="checkbox"><label>Apresentação</label></li>
+            <li class="tarefa alta"><input type="checkbox"><label>Revisão final</label></li>
+            <li class="tarefa alta"><input type="checkbox"><label>Corrigir layout</label></li>
+            <li class="tarefa alta"><input type="checkbox"><label>Testar tudo</label></li>
+            <li class="tarefa alta"><input type="checkbox"><label>Entrega final</label></li>
         </ul>
 
     </div>
