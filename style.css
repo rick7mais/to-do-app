@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #12121a;
+    background: #0f0f18;
     color: white;
     display: flex;
     justify-content: center;
@@ -14,25 +14,28 @@ body {
 }
 
 .container {
-    width: 800px;
+    width: 900px;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 30px;
+    font-size: 32px;
 }
 
 /* FORM */
 .form {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .form input, .form select, .form button {
-    padding: 12px;
-    border-radius: 8px;
+    padding: 15px;
+    border-radius: 10px;
     border: none;
+    font-size: 16px;
 }
 
 .form input {
@@ -45,42 +48,56 @@ h1 {
     cursor: pointer;
 }
 
-/* LISTAS */
+/* ERRO ESCONDIDO */
+.erro {
+    width: 100%;
+    color: #ff5252;
+    display: none;
+}
+
+/* MOSTRA ERRO QUANDO FORM É USADO */
+.form:focus-within .erro {
+    display: block;
+}
+
+/* TÍTULOS */
 .titulo {
-    margin: 20px 0 10px;
+    margin: 25px 0 10px;
+    font-size: 22px;
 }
 
 .baixa-text { color: #4caf50; }
 .media-text { color: #fbc02d; }
-.alta-text { color: #e53935; }
+.alta-text { color: #ff5252; }
 
 ul {
     list-style: none;
 }
 
+/* TAREFAS GRANDES */
 .tarefa {
     display: flex;
     align-items: center;
-    padding: 20px;
-    margin-bottom: 12px;
-    border-radius: 12px;
-    font-size: 18px;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    font-size: 20px;
     transition: 0.3s;
 }
 
 /* CORES */
 .baixa { background: #1b5e20; }
-.media { background: #f9a825; color: black; }
+.media { background: #fbc02d; color: black; }
 .alta { background: #b71c1c; }
 
-/* CHECKBOX */
+/* CHECK */
 .tarefa input {
-    transform: scale(1.5);
-    margin-right: 15px;
+    transform: scale(1.7);
+    margin-right: 20px;
 }
 
 /* CONCLUÍDO */
 .tarefa input:checked + label {
     text-decoration: line-through;
-    opacity: 0.6;
+    opacity: 0.5;
 }
