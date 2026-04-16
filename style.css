@@ -20,7 +20,6 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 32px;
 }
 
 /* FORM */
@@ -48,29 +47,28 @@ h1 {
     cursor: pointer;
 }
 
-/* ERRO ESCONDIDO */
+/* ERRO (invisível por padrão) */
 .erro {
     width: 100%;
     color: #ff5252;
     display: none;
-    margin-top: 5px;
 }
 
-/* MOSTRA ERRO APENAS QUANDO SUBMETE INVÁLIDO */
-.form:has(input:invalid),
-.form:has(select:invalid) {
-    position: relative;
+/* MOSTRA ERRO APENAS QUANDO NÃO ESTÁ EM FOCO E ESTÁ INVÁLIDO */
+.form input:invalid:not(:focus),
+.form select:invalid:not(:focus) {
+    border: 2px solid red;
 }
 
-.form:has(input:invalid) .erro,
-.form:has(select:invalid) .erro {
+/* ATIVA TEXTO DE ERRO */
+.form input:invalid:not(:focus) ~ .erro,
+.form select:invalid:not(:focus) ~ .erro {
     display: block;
 }
 
 /* TÍTULOS */
 .titulo {
     margin: 25px 0 10px;
-    font-size: 22px;
 }
 
 .baixa-text { color: #4caf50; }
@@ -89,7 +87,6 @@ ul {
     margin-bottom: 15px;
     border-radius: 15px;
     font-size: 20px;
-    transition: 0.3s;
 }
 
 /* CORES */
