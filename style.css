@@ -53,10 +53,17 @@ h1 {
     width: 100%;
     color: #ff5252;
     display: none;
+    margin-top: 5px;
 }
 
-/* MOSTRA ERRO QUANDO FORM É USADO */
-.form:focus-within .erro {
+/* MOSTRA ERRO APENAS QUANDO SUBMETE INVÁLIDO */
+.form:has(input:invalid),
+.form:has(select:invalid) {
+    position: relative;
+}
+
+.form:has(input:invalid) .erro,
+.form:has(select:invalid) .erro {
     display: block;
 }
 
